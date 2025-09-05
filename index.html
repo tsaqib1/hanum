@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>hanum.com — Video platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="inner">
+        <div class="brand">
+          <div class="logo">H</div>
+          <span>hanum<span style="color:var(--accent)">.com</span></span>
+        </div>
+        <div class="search">
+          <input id="searchInput" placeholder="Cari video, mis. musik, travel..." />
+          <button id="searchBtn" class="icon-btn">Cari</button>
+          <label for="uploadFile" class="icon-btn btn" title="Unggah"><strong>Unggah</strong></label>
+          <input id="uploadFile" type="file" accept="video/*" />
+          <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+        </div>
+        <div style="width:8px"></div>
+      </div>
+    </header>
+
+    <!-- Layout -->
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="side-link"><strong>Beranda</strong></div>
+        <div class="side-link">Eksplor</div>
+        <div class="side-link">Shorts</div>
+        <div class="side-link">Subscription</div>
+        <hr />
+        <div class="side-link">Histori</div>
+        <div class="side-link">Tonton Nanti</div>
+      </aside>
+
+      <!-- Konten utama -->
+      <main class="content">
+        <div class="badges" id="badges"></div>
+        <div class="grid" id="grid"></div>
+      </main>
+    </div>
+
+    <!-- Modal video -->
+    <div id="modal" style="display:none" class="modal" aria-hidden="true">
+      <div class="box">
+        <div class="video-wrap" id="videoWrap"></div>
+        <div class="video-meta">
+          <div id="videoTitle" class="title"></div>
+          <div class="muted" id="videoStats"></div>
+          <div class="video-actions">
+            <button class="btn" id="likeBtn">Suka</button>
+            <button class="btn" id="shareBtn">Bagikan</button>
+            <button class="btn" id="closeModal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
